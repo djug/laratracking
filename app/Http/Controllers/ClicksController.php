@@ -18,6 +18,6 @@ class ClicksController extends Controller
     {
         $stats = DB::table('clicks')->select('tracking_id', DB::raw('count(*) as nb_clicks'))->groupBy('tracking_id')->get();
 
-        return $stats;
+        return view('stats')->with(compact('stats'));
     }
 }
