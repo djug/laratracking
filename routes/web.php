@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/track/{id}', 'ClicksController@visit');
+Route::get('stats', 'ClicksController@getStats');
