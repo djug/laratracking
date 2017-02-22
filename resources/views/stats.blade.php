@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ config('app.locale') }}">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,8 +23,8 @@
      <tbody>
        @foreach ($stats as $link)
        <tr>
-         <td>{{$link->tracking_id}}</td>
-         <td>{{$link->nb_clicks}}</td>
+         <td>{{ $link->tracking_id }}</td>
+         <td>{{ $link->nb_clicks }}</td>
        </tr>
        @endforeach
      </tbody>
